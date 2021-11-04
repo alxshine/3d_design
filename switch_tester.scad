@@ -68,4 +68,10 @@ difference()
     edge_fillet(total_width, [0,0,180], [total_width/2,0, height]);
     edge_fillet(total_length,[0,0,90],[0,total_length/2,height]);
     edge_fillet(total_length,[0,0,-90],[total_width,total_length/2,height]);
+
+    // fillets on the sides
+    edge_fillet(height, [180,90,0], [0,0,height/2]);
+    edge_fillet(height, [0,90,0], [total_width,total_length,height/2]);
+    edge_fillet(height, [90,90,0], [total_width,0,height/2]);
+    edge_fillet(height, [-90,90,0], [0,total_length,height/2]);
 }
