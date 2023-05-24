@@ -1,15 +1,16 @@
 // translate([0,0,-10])
 // 	cube([30,10,10]);
 
-screwhole_length = 7;
+screwhole_length = 9;
 leg_radius = 5;
+hole_radius = 1;
 
 module leg(x,y){
 	translate([x,y,-20])
 		difference() {
 			cylinder(20, leg_radius, leg_radius, $fn=20);
 			translate([0,0,20- screwhole_length + 1]) // holes for screws
-				cylinder(screwhole_length, 2, 2, $fn=20);
+				cylinder(screwhole_length, hole_radius, hole_radius, $fn=20);
 		}
 }
 
